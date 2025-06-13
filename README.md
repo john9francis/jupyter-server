@@ -23,3 +23,5 @@ docker push john9francis/jupyter-server:latest
 ```sh
 docker run --rm -p 8888:8888 -v ./src:/src john9francis/jupyter-server:latest
 ```
+
+View the image on [docker hub](https://hub.docker.com/r/john9francis/jupyter-server)
