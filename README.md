@@ -21,12 +21,17 @@ docker push john9francis/jupyter-server:latest
 
 ## To publish cross-arch
 ```sh
-docker buildx build --platform linux/amd64,linux/arm64 -t john9francis/jupyter-server:latest --push .
+docker buildx build --platform linux/386 -t john9francis/jupyter-server:latest --push .
 ```
-Other archs to try:
-```
-linux/arm/v7,linux/arm/v6,linux/386,linux/ppc64le,linux/s390x
-```
+Arches pushed:
+- ✅ linux/amd64
+- ✅ linux/arm64
+- ✅ linux/386
+Arches not supported (yet):
+- ❌ linux/arm/v7
+- ❌ linux/arm/v6
+- ❌ linux/ppc64le
+- ❌ linux/s390x
 
 
 ## To get straight from docker hub
