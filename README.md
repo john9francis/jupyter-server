@@ -21,7 +21,7 @@ docker push john9francis/jupyter-server:latest
 
 ## To publish cross-arch
 ```sh
-docker buildx build --platform linux/386 -t john9francis/jupyter-server:latest --push .
+docker buildx build --platform linux/amd64,linux/arm64,linux/386 -t john9francis/jupyter-server:latest --push .
 ```
 Arches pushed:
 - ✅ linux/amd64
