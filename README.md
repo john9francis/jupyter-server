@@ -19,6 +19,16 @@ docker tag jupyter-server john9francis/jupyter-server:latest
 docker push john9francis/jupyter-server:latest
 ```
 
+## To publish cross-arch
+```sh
+docker buildx build --platform linux/amd64,linux/arm64 -t john9francis/jupyter-server:latest --push .
+```
+Other archs to try:
+```
+linux/arm/v7,linux/arm/v6,linux/386,linux/ppc64le,linux/s390x
+```
+
+
 ## To get straight from docker hub
 ```sh
 docker run --rm -p 8888:8888 -v ./src:/src john9francis/jupyter-server:latest
